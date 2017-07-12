@@ -9,3 +9,9 @@ body{
 	overflow-y:scroll;
 	height:500px;
 }
+#produse-in-cos
+{
+    height: 360px;
+    overflow-y: scroll;
+    width: 100%;
+}
