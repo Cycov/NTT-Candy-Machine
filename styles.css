@@ -20,3 +20,16 @@ body{
     overflow-y: scroll;
     width: 100%;
 }
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 6px;
+  margin-right: 5px;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.glyphicon-globe {
+    font-size: large;
+}
