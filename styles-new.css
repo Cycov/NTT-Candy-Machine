@@ -1,0 +1,61 @@
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 115px 10px 10px 10px; /* the top 100px are for the menus */
+  /*width: 100%;*/
+}
+.main .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+.main .menu .navbar .container {
+  width: 100%;
+}
+
+.sidebar {
+  position: absolute;
+  right: -150px;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 150px 5px 50px 5px; /* the top 150px are for tota, the bottom 50px are for ads */
+  width: 150px;
+}
+.sidebar .total {
+  position: fixed;
+  top: 0;
+  height: 145px;
+  width: 100%;
+}
+.sidebar .ads {
+  position: fixed;
+  bottom: 0;
+  height: 45px;
+  width: 100%;
+}
+
+body.sidebar-open .main {
+  right: 150px;
+}
+body.sidebar-open .main .menu > * {
+  margin-right: 150px;
+}
+body.sidebar-open .sidebar {
+  right: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
