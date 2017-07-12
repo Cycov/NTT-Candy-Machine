@@ -9,6 +9,11 @@ body{
 	overflow-y:scroll;
 	height:500px;
 }
+.box {
+    height: 145px;
+    width: 100%;
+    overflow: hidden;
+}
 #produse-in-cos
 {
     height: 360px;
