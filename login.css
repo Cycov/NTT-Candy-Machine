@@ -1,0 +1,22 @@
+.glyphicon glyphicon-user {
+	 font-size: large;
+	 height: 1145px;
+     width: 100%;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 250px;
+    line-height: 1.42857143;
+    color: #e6e5d0;
+    background-color: #3a0000;
+    text-align: center;
+}
+
+.input-group{
+	width: 110%;
+	padding-left: 500px;
+	padding-right:620px;
+}
+h1{
+	color:#ffaeae;;
+}
