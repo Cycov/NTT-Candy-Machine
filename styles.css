@@ -36,3 +36,8 @@ body{
 .navbar {
   margin-bottom: 0;
 }
+
+.input-group.col-lg-3 {
+    float: right;
+	margin-top: 7px;
+}
