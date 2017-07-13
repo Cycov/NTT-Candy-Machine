@@ -31,5 +31,8 @@ body{
   border-radius: 15px;
 }
 .glyphicon-globe {
-    font-size: large;
+    font-size: medium;
+}
+.navbar {
+  margin-bottom: 0;
 }
