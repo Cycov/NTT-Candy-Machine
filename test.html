@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Test</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            .btn-group-justified > .btn.name
+            {
+                width: 6%;
+            }
+            .disabled 
+            {
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="btn-group btn-group-justified bascket-product" role="group" data-price="3.4" data-quantity="1">
+            <a class="btn btn-danger quantity-decrease">
+                <span class="glyphicon glyphicon-minus"></span>
+            </a>
+            <a class="btn btn-link quantity disabled">1</a>
+            <a class="btn btn-link name disabled">pew</a>
+            <a class="btn btn-success quantity-increase">
+                <span class="glyphicon glyphicon-plus"></span>
+            </a>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

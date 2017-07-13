@@ -36,3 +36,30 @@ body{
 .navbar {
   margin-bottom: 0;
 }
+.btn-group-justified > .btn.name
+{
+    width: 6%;
+}
+.btn-group-justified > .btn.quantity-decrease,
+.btn-group-justified > .btn.quantity-increase
+{
+    padding: 0 0 0 0;
+}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle).quantity-decrease
+{
+    border-radius: 15px;
+}
+.btn-group>.btn:last-child:not(:first-child).quantity-increase
+{
+    border-radius: 15px;
+}
+.disabled 
+{
+    color: black;
+    pointer-events: none;
+    cursor: default;
+}
+.bascket-product
+{
+    margin-bottom: 4px;
+}
