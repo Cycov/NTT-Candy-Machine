@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <head>
 	<title>Candy Machine</title>
 	<meta charset="utf-8"/>
@@ -338,10 +338,33 @@
 							</a>
 						</div>
 				</div>
+			<!--LORE-->
 				<div class="box container">
-					<h3>sadasd</h3>
-					<h3>sadasd</h3>
-					<h3>----------------------------------</h3>
+					<div class="reclama" style="max-width:500px">
+ 						 <img class="mySlides" src="img/mountain_dew_reclama.jpg" style="width:100%; height:145px">
+ 						 <img class="mySlides" src="img/sprite_reclama.jpg" style="width:100%; height:145px">
+ 						 <img class="mySlides" src="img/cola_reclama.png" style="width:100%; height:145px">
+					</div>
+
+				<script>
+					var myIndex = 0;
+					carousel();
+
+					function carousel() {
+  					  var i;
+  					  var x = document.getElementsByClassName("mySlides");
+   					  for (i = 0; i < x.length; i++)
+					  {
+       						x[i].style.display = "none";  
+    					  }
+    						myIndex++;
+  					  if (myIndex > x.length) 
+						{myIndex = 1}    
+  					  x[myIndex-1].style.display = "block";  
+    					  setTimeout(carousel, 2000); // Change image every 2 seconds
+					}
+				</script>
+
 				</div>
 			</div>
 		</div>
