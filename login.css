@@ -4,18 +4,21 @@
      width: 100%;
 }
 body {
+	background-image:url('imglog/candys.jpg');
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 250px;
     line-height: 1.42857143;
     text-align: center;
-	background-size: 1380px 780px;
+	background-size: cover;
     background-repeat: no-repeat;
+	overflow-x:hidden;
+	overflow-y:hidden;
 }
 
-.input-group{
+.form-group{
 	width: 110%; 
 	padding-left: 550px;
-	padding-right:680px;	 
+	padding-right:680px;	
 }
 .btn-default{
 	font-size: 15px;
