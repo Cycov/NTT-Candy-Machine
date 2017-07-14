@@ -6,8 +6,9 @@ body{
 }
 #products{
 	width:100%;
-	overflow-y:scroll;
+	overflow-y:auto;
 	height:500px;
+	overflow-x:hidden;
 }
 .box {
     height: 145px;
@@ -36,12 +37,26 @@ body{
 .navbar {
   margin-bottom: 0;
 }
-<<<<<<< HEAD
+
 
 .input-group.col-lg-3 {
     float: right;
 	margin-top: 7px;
-=======
+
+.thumbnail h4{
+	text-align:center;
+}
+.thumbnail #price{
+	position:absolute;
+	top:10px;
+	right:30px;
+	font-weight:bold;
+}
+div.stars {
+  width: 100%;
+    display: block;
+    text-align: center;
+}
 .btn-group-justified > .btn.name
 {
     width: 6%;
@@ -68,5 +83,4 @@ body{
 .bascket-product
 {
     margin-bottom: 4px;
->>>>>>> a6cfb013fbac248819f796a3acbfbf5e74e32b87
 }
