@@ -7,16 +7,22 @@ body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 250px;
     line-height: 1.42857143;
-    color: #e6e5d0;
-    background-color: #3a0000;
     text-align: center;
+	background-size: 1380px 780px;
+    background-repeat: no-repeat;
 }
 
 .input-group{
-	width: 110%;
-	padding-left: 500px;
-	padding-right:620px;
+	width: 110%; 
+	padding-left: 550px;
+	padding-right:680px;	 
 }
-h1{
-	color:#ffaeae;;
+.btn-default{
+	font-size: 15px;
+    text-shadow: 0 1px 0 #c838d2;
+	position: relative; 
+	top: -153px; 
+    left: 5px;	 
 }
+
+
