@@ -51,6 +51,9 @@ div.stars {
     display: block;
     text-align: center;
 }
+.product-thumbnail{
+	margin-top:10px;
+}
 .btn-group-justified > .btn.name
 {
     width: 6%;
