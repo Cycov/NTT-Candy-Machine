@@ -81,8 +81,43 @@ div.stars {
 {
     margin-bottom: 4px;
 }
+<<<<<<< HEAD
 
 .input-group.col-lg-3 {
     float: right;
 	margin-top: 7px;
  }
+=======
+#logo-button {
+	
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	margin-left: 350px;
+	
+	
+}
+#logo-button h4{
+	font-family: "Merinda" , Georgia, Serif;
+	color: white;
+	
+}
+#logo-button h4{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#logo-button a:hover {
+	
+	text-decoration: none;
+
+}
+.glyphicon-question-sign {
+	font-size: x-large;
+	text-align: center;
+}
+.glyphicon-globe{
+	font-size: x-large;
+	text-align: center;
+}
+>>>>>>> 837664501a8c32a3337e46e9b02d93daebedf6b5
