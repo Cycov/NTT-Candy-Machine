@@ -81,3 +81,35 @@ div.stars {
 {
     margin-bottom: 4px;
 }
+#logo-button {
+	
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	margin-left: 350px;
+	
+	
+}
+#logo-button h4{
+	font-family: "Merinda" , Georgia, Serif;
+	color: white;
+	
+}
+#logo-button h4{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#logo-button a:hover {
+	
+	text-decoration: none;
+
+}
+.glyphicon-question-sign {
+	font-size: x-large;
+	text-align: center;
+}
+.glyphicon-globe{
+	font-size: x-large;
+	text-align: center;
+}
