@@ -36,8 +36,37 @@ body{
 .navbar {
   margin-bottom: 0;
 }
+<<<<<<< HEAD
 
 .input-group.col-lg-3 {
     float: right;
 	margin-top: 7px;
+=======
+.btn-group-justified > .btn.name
+{
+    width: 6%;
+}
+.btn-group-justified > .btn.quantity-decrease,
+.btn-group-justified > .btn.quantity-increase
+{
+    padding: 0 0 0 0;
+}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle).quantity-decrease
+{
+    border-radius: 15px;
+}
+.btn-group>.btn:last-child:not(:first-child).quantity-increase
+{
+    border-radius: 15px;
+}
+.disabled 
+{
+    color: black;
+    pointer-events: none;
+    cursor: default;
+}
+.bascket-product
+{
+    margin-bottom: 4px;
+>>>>>>> a6cfb013fbac248819f796a3acbfbf5e74e32b87
 }
