@@ -37,12 +37,6 @@ body{
 .navbar {
   margin-bottom: 0;
 }
-
-
-.input-group.col-lg-3 {
-    float: right;
-	margin-top: 7px;
-
 .thumbnail h4{
 	text-align:center;
 }
@@ -56,6 +50,9 @@ div.stars {
   width: 100%;
     display: block;
     text-align: center;
+}
+.product-thumbnail{
+	margin-top:10px;
 }
 .btn-group-justified > .btn.name
 {
