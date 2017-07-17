@@ -1,3 +1,21 @@
+body{
+	width:100%;
+	height:650px;
+	overflow:hidden;
+}
+.scrollbar{
+	height:500px;
+	width:180px;
+	overflow:auto;
+	overflow-x:hidden;
+	border: 1px;	
+}
+.btn-default{
+	width:180px;
+}
+.btn-default h5{
+	text-align:center;	
+}
 .table_meniu, .table_filtru{
 	width: 100%;
 	height: 40px;
@@ -30,4 +48,35 @@
 .table_meniu a, .table_filtru a{
 	color: white;
 	text-decoration: none;
+}
+.head-stoc-dr{
+	width:100%;
+	height:140px;
+}
+.head-stoc-dr h1,h3{
+	text-align:center;
+}
+.btn-group.btn-group-justified.basket-product{
+	width:200px;
+	display:block;
+	margin:0 auto;
+}
+.form-group{
+	width:350px;
+	display:block;
+	margin:0 auto;
+}
+.form-group label{
+	width:100px;
+	vertical-align:top;
+}
+.form-group label.second{
+	width:auto;
+}
+#submit-btn{
+	display:block;
+	margin:0 auto;
+}
+.col-xs-10.col-md-10{
+	height:500px;
 }

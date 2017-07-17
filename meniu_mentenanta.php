@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="stylesheets/mentenanta.css" type="text/css"/>
 </head>
+<body>
 <table class="table_meniu">
 	<tr>
 		<td><a href="#"><div><span class="glyphicon glyphicon-globe"></span></div></a></td>
@@ -22,3 +23,5 @@
 		<td><a href ="#"><div><span class="glyphicon glyphicon-off"></span></div></a></td>
 	</tr>
 </table>
+</body>
+</html>
