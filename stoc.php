@@ -20,7 +20,7 @@
 	?>
 	<div class="row">
 		<div class="col-xs-2 col-md-2">
-			<div class="btn-group" role="group" aria-label="...">
+			<div class="btn-group produs-nou" role="group" aria-label="...">
 				<button type="button" class="btn btn-default"><h5>Produs Nou</h5></button>
 			</div>
 		<div class="scrollbar">

@@ -4,6 +4,7 @@ body{
 	overflow:hidden;
 }
 .scrollbar{
+	margin-top:10px;
 	height:500px;
 	width:180px;
 	overflow:auto;
@@ -18,6 +19,7 @@ body{
 }
 .btn-default{
 	width:180px;
+	margin-top:10px;
 }
 .btn-default h5{
 	text-align:center;	
