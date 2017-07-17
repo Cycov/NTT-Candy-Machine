@@ -1,0 +1,90 @@
+body{
+	width:100%;
+	height:650px;
+	overflow:hidden;
+}
+.scrollbar{
+	margin-top:10px;
+	height:500px;
+	width:180px;
+	overflow:auto;
+	overflow-x:hidden;
+	border: 1px;	
+}
+.scrollbar  a:link{
+	text-decoration:none;
+}
+.scrollbar ul{
+	list-style-type:none;
+}
+.btn-default{
+	width:180px;
+	margin-top:10px;
+}
+.btn-default h5{
+	text-align:center;	
+}
+.table_meniu, .table_filtru{
+	width: 100%;
+	height: 40px;
+}
+
+.table_meniu td{
+	background-color: #8EBF5F;
+	border-left: 1px solid #818480;
+	text-align: center;
+	font-size: large;
+}
+.table_filtru td{
+	background-color: #BEBEBE;
+	border-left: 1px solid #818480;
+	text-align: center;
+	font-size: large;
+}
+.table_filtru td:nth-child(1), .table_meniu td:nth-child(1){
+	border-left: none;
+	text-align: center;
+}
+.table_meniu div, .table_filtru div{
+	padding: 7px 10px 10px 10px;
+	height: 40px;
+}
+.table_meniu a div:hover, .table_filtru a div:hover{
+	text-decoration: none;
+	background: #CCCCCC;
+}
+.table_meniu a, .table_filtru a{
+	color: white;
+	text-decoration: none;
+}
+.head-stoc-dr{
+	width:100%;
+	height:140px;
+}
+.head-stoc-dr h1,h3{
+	text-align:center;
+}
+.btn-group.btn-group-justified.basket-product{
+	width:200px;
+	display:block;
+	margin:0 auto;
+}
+.form-group{
+	width:350px;
+	display:block;
+	margin:0 auto;
+}
+.form-group label{
+	width:100px;
+	vertical-align:top;
+}
+.form-group label.second{
+	width:auto;
+}
+#submit-btn{
+	display:block;
+	margin:0 auto;
+}
+.col-xs-10.col-md-10{
+	height:500px;
+}
