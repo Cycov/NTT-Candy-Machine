@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Istoric</title>
+	<title>Statistici</title>
 		<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -9,13 +9,17 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="stylesheets/stoc.css"/>
 	<link rel="stylesheet" href="stylesheets/tables.css"/>
 </head>
 <body>
 	<div class="container" id="main-container">
+		<?php
+			include('meniu_mentenanta.php');
+		?>
 		<div class="col-xs-4 col-md-4">
 			<div class="form-group">
+			<label>De la:</label>
 				<div class='input-group date' id='datetimepicker6'>
 					<input type='text' class="form-control" />
 					<span class="input-group-addon">
@@ -26,6 +30,7 @@
 		</div>
 		<div class="col-xs-4 col-md-4">
 			<div class="form-group">
+				<label>Pana la:</label>
 				<div class='input-group date' id='datetimepicker7'>
 					<input type='text' class="form-control" />
 					<span class="input-group-addon">
@@ -45,34 +50,48 @@
 				<table class="table table-border">
 					<thead>
 						<tr>
-							<th>Data</th>
-							<th>Nume produs</th>
-							<th>Modificari</th>
-							<th>Motiv modificare produs</th>
-							<th>Nume administrator</th>
+							<th>Nume Produs</th>
+							<th>Cantitate</th>
+							<th>Total [lei]</th>
+							<th>Rating</th>
 						</tr>
 					</thead>
 					<tbody>
 					<tr>
-						<td>07/14/2017</td>
 						<td>Coca Cola 0.5L</td>
-						<td>Cantitae:4->2</td>
-						<td>Expirat</td>
-						<td>Cristea Adrian</td>
+						<td>4</td>
+						<td>[formula]</td>
+						<td>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+						</td>
 					</tr>
 					<tr>
-						<td>07/14/2017</td>
 						<td>Coca Cola 0.5L</td>
-						<td>Cantitae:4->2</td>
-						<td>Expirat</td>
-						<td>Cristea Adrian</td>
+						<td>4</td>
+						<td>[formula]</td>
+						<td>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+						</td>
 					</tr>
 					<tr>
-						<td>07/14/2017</td>
 						<td>Coca Cola 0.5L</td>
-						<td>Cantitae:4->2</td>
-						<td>Expirat</td>
-						<td>Cristea Adrian</td>
+						<td>4</td>
+						<td>[formula]</td>
+						<td>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+						</td>
 					</tr>
 					</tbody>
 				</table>
