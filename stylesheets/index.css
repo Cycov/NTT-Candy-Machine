@@ -117,3 +117,24 @@ div.stars {
 	font-size: x-large;
 	text-align: center;
 }
+.btn.btn-active {
+    background-image: none;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    background-position: 0 -15px;
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+.hidden {
+    display: none;
+}
+.centered {
+    align-content: center;
+}
+.align-left{
+    float: left;
+}
+#myModalLabel, .price {
+    font-size: 1.25em;
+    margin-right: 1em;
+}

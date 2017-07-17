@@ -41,17 +41,17 @@
 				<!--FILTER-->
 				<nav class="navbar navbar-default">
 					<ul class="nav navbar-nav">
-						<div class="btn-group btn-group-lg" role="group" aria-label="...">
-							<button type="button" class="btn btn-default">Bauturi</button>
-							<button type="button" class="btn btn-default">Dulciuri</button>
-							<button type="button" class="btn btn-default">Dulciuri2</button>
-							<button type="button" class="btn btn-default">Snacks</button>
+						<div id="filter-bar" class="btn-group btn-group-lg" role="group" aria-label="...">
+							<button type="button"  data-category="drink" class="btn btn-filter btn-default">Bauturi</button>
+							<button type="button"  data-category="candy" class="btn btn-filter btn-default">Dulciuri</button>
+							<button type="button"  data-category="misc" class="btn btn-filter btn-default">Dulciuri2</button>
+							<button type="button"  data-category="snack" class="btn btn-filter btn-default">Snacks</button>
 								<div class="input-group col-lg-3">
-								    <input type="text" class="form-control" placeholder="Search for...">
+								    <input id="filter-search" type="text" class="form-control" placeholder="Search for...">
 									<span class="input-group-btn">
 										<button class="btn btn-search" type="button">Go!</button>
 									</span>
-									</div><!-- /input-group -->	
+								</div><!-- /input-group -->	
 						</div>								
  					</ul>
 				</nav>
@@ -133,11 +133,12 @@
 					<h5>TOTAL:<span id="total-price">0.0</span></h5>
 					
 					<!-- Small modal trigger button -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalComanda">COMANDA</button>
+					<button id="basket-trigger-btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalComanda">COMANDA</button>
 				</div>
 				
 				
 				<div id="produse-in-cos" class="container">
+
 				</div>
 			<!--LORE-->
 				<div class="box container">
@@ -177,18 +178,22 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">TOTAL:</h4>
+					<span class="modal-title" id="myModalLabel">TOTAL:</span>
+					<span class='price'>0.0</span>
 				</div>
 				<div class="modal-body">
-					<ol>
-						<li> </li>
-						<li> </li>
-						<li> </li>
-						<li> </li>
-						<li> </li>
-					</ol>
+					<div class="row">
+						<div class="col-md-5 col-xs-5">
+							<ol>
+							</ol>
+						</div>
+						<div class="col-md-7 centered col-xs-7">
+						</div>
+					</div>
 				</div>
 			<div class="modal-footer">
+				<span class="align-left" style="font-size: 1.2em">Credit Curent: </span>
+				<span class="credit align-left" style="font-size: 1.2em">78432</span>
 				<button type="button" class="btn btn-primary">CONFIRMA</button>
 			</div>
 			</div>
@@ -207,7 +212,9 @@
 					<h4 class="modal-title">Regulament</h4>
 				</div>
 				<div class="modal-body">
-					demo text
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices enim nisl, a rhoncus dolor placerat eu. Fusce eleifend lorem tortor. Suspendisse a pharetra orci. Integer at mi eget eros condimentum tincidunt. Sed vel congue mi. Mauris ac ligula purus. Etiam ac purus massa. Proin et sollicitudin tortor, sed ultricies orci.
+
+Etiam egestas massa tempor, efficitur ex eu, sollicitudin arcu. In hac habitasse platea dictumst. Proin consequat faucibus cursus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis ex diam, sit amet auctor lacus faucibus in. In vulputate sed nibh non placerat. Duis non velit tristique, luctus ligula eget, sollicitudin enim. Aliquam eleifend imperdiet erat, quis tempor sem malesuada at. Vestibulum rhoncus interdum turpis, eu ultrices dolor accumsan eu. Quisque blandit faucibus arcu eget auctor. Donec efficitur ut augue sed aliquam. Suspendisse ornare, dui ut pharetra suscipit, nisi nulla scelerisque metus, in placerat velit turpis suscipit purus. Vivamus vel ex id arcu euismod sodales. Ut molestie pretium tellus, quis elementum diam. Vestibulum dapibus vel magna in pharetra.
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Am înteles.</button>
@@ -226,7 +233,7 @@
 	<script src="js/index.js"></script>
 
 	<div id="templates" style="display: none">
-		<div id="product">
+		<div class="product">
 			<div class="btn-group btn-group-justified bascket-product" role="group" data-price="0.0" data-quantity="1">
 				<a class="btn btn-danger quantity-decrease">
 					<span class="glyphicon glyphicon-minus"></span>
