@@ -1,0 +1,33 @@
+.table_meniu, .table_filtru{
+	width: 100%;
+	height: 40px;
+}
+
+.table_meniu td{
+	background-color: #8EBF5F;
+	border-left: 1px solid #818480;
+	text-align: center;
+	font-size: large;
+}
+.table_filtru td{
+	background-color: #BEBEBE;
+	border-left: 1px solid #818480;
+	text-align: center;
+	font-size: large;
+}
+.table_filtru td:nth-child(1), .table_meniu td:nth-child(1){
+	border-left: none;
+	text-align: center;
+}
+.table_meniu div, .table_filtru div{
+	padding: 7px 10px 10px 10px;
+	height: 40px;
+}
+.table_meniu a div:hover, .table_filtru a div:hover{
+	text-decoration: none;
+	background: #CCCCCC;
+}
+.table_meniu a, .table_filtru a{
+	color: white;
+	text-decoration: none;
+}
