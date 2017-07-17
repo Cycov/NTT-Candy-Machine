@@ -10,6 +10,12 @@ body{
 	overflow-x:hidden;
 	border: 1px;	
 }
+.scrollbar  a:link{
+	text-decoration:none;
+}
+.scrollbar ul{
+	list-style-type:none;
+}
 .btn-default{
 	width:180px;
 }
