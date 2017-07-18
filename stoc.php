@@ -107,7 +107,13 @@
 			</div>
 			<div class="form-group">	
 				<label for="motiv">Motiv</label>
-				<textarea type="text" id="motiv"></textarea>
+				<select>
+					<option>Motiv</option>
+					<option>Motiv</option>
+					<option>Motiv</option>
+					<option>Motiv</option>
+					<option>Motiv</option>
+				</select>
 			</div>
 			<br>
 			<div class="form-group">
