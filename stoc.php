@@ -21,61 +21,26 @@
 	<div class="row">
 		<div class="col-xs-2 col-md-2">
 			<div class="btn-group produs-nou" role="group" aria-label="...">
-				<button type="button" class="btn btn-default"><h5>Produs Nou</h5></button>
+				<button id="product-new-btn" type="button" class="btn btn-default"><h5>Produs Nou</h5></button>
 			</div>
-		<div class="scrollbar">
-			<ul>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>			
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>			
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>	
-				<a href="stoc.html"> <li>Coca Cola 0.5L</li> </a>				
-			</ul>
-		</div>
+			<div class="scrollbar">
+				<ul id="products-in-stock">
+					<li class="product-entry selected" data-id="1"><span style="display: none">{ "id":0, "name":"test product1", "quantity":2, "description":"none", "category":"snack", "price":2.5 }</span><a href="#"> Coca Cola 0.5L </a></li> 
+					<li class="product-entry" data-id="2"><span style="display: none">{ "id":0, "name":"test product2", "quantity":4, "description":"none", "category":"drink", "price":2.5 }</span><a href="#"> Coca Cola 0.5L </a></li> 
+					<li class="product-entry" data-id="3"><span style="display: none">{ "id":0, "name":"test product3", "quantity":287, "description":"none", "category":"candy", "price":2.5 }</span><a href="#"> Coca Cola 0.5L </a></li> 
+				</ul>
+			</div>
 		</div>
 		<div class="col-xs-10 col-md-10">
 			<div class="head-stoc-dr">
-				<h1><label> Coca Cola 0.5L </label></h1>
+				<h1 id="product-name"></h1>
 				<h3> Cantitate </h3>
 			</div>
-			<div class="btn-group btn-group-justified basket-product" role="group" data-price="3.4" data-quantity="1">
+			<div class="btn-group btn-group-justified quantity-product" role="group" data-price="0.0" data-quantity="0">
 				<a class="btn btn-danger quantity-decrease">
 					<span class="glyphicon glyphicon-minus"></span>
 				</a>
-				<a class="btn btn-link quantity disabled">7</a>
+				<a class="btn btn-link quantity disabled">0</a>
 				<a class="btn btn-success quantity-increase">
 					<span class="glyphicon glyphicon-plus"></span>
 				</a>
@@ -85,33 +50,33 @@
 			<form method="POST">
 			<div class="form-group">
 				<label for="descriere">Descriere</label>
-				<textarea type="text" id="descriere"></textarea>
+				<textarea type="text" id="product-description"></textarea>
 			</div>
 			<div class="form-group">	
 				<label for="categorie">Categorie</label>
-				<select>
-					<option value="bauturi">Bauturi</option>
-					<option value="dulciuri">Dulciuri</option>
-					<option value="dulciuri2">Dulciuri2</option>
-					<option value="snacks">Snacks</option>
+				<select id="product-category">
+					<option value="drink">Bauturi</option>
+					<option value="candy">Dulciuri</option>
+					<option value="none">None</option>
+					<option value="snack">Snacks</option>
 				</select>
 			</div>
 			<div class="form-group">
 				<label for="pret">Pret</label>
-				<input type="text" id="pret">
+				<input id="product-price" type="text">
 				<label class="second" for="lei">Lei</label>
 			</div>
 			<div class="form-group">	
 				<label for="redenumire">Redenumire</label>
-				<input type="text" id="redenumire">
+				<input id="product-rename" type="text">
 			</div>
 			<div class="form-group">	
 				<label for="motiv">Motiv</label>
-				<textarea type="text" id="motiv"></textarea>
+				<textarea type="text"></textarea>
 			</div>
 			<br>
-			<div class="form-group">
-				<input type="submit" value="Salveaza" id="submit-btn">
+			<div class="form-group center">
+				<a class="btn btn-success">Salveaza</a>
 			</div>
 			</form>
 		</div>
@@ -121,6 +86,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/stoc.js"></script>
 
 </body>
 </html>
