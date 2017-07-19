@@ -50,6 +50,7 @@
 			</div>
 
 			<br>
+			<!-- DIANA -->
 			<form method="POST">
 			<div class="form-group">
 				<label for="descriere">Descriere</label>

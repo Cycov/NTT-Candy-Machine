@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+	include('db/db_config.php');
+?>
+<!DOCTYPE html>
 <head>
 	<title>Candy Machine</title>
 	<meta charset="utf-8"/>
@@ -59,72 +62,29 @@
 				<!--PRODUCTS-->
 				<div id="products">
 					<div class="row">
-						<div class="col-xs-6 col-md-3 product-thumbnail" data-category="drink" data-price="2.5" data-name="Coca Cola 0.33L" data-quantity="5">
-							<div class="thumbnail">
-								<a href="#">
-									<img src="img/coca-cola.png" alt="Coca Cola 0.33L">
-								</a>
-								<span id="price">2.5 Lei</span>
-								<h4>Coca Cola 0.33L</h4>
-								<div class="stars">
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-md-3 product-thumbnail" data-category="drink" data-price="2.5" data-name="Coca Cola 0.33L" data-quantity="5">
-							<div class="thumbnail">
-								<a href="#">
-									<img src="img/coca-cola.png" alt="Coca Cola 0.33L">
-								</a>
-								<span id="price">2.5 Lei</span>
-								<h4>Coca Cola 0.33L</h4>
-								<div class="stars">
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-md-3 product-thumbnail" data-category="drink" data-price="2.5" data-name="Coca Cola 0.33L" data-quantity="5">
-							<div class="thumbnail">
-								<a href="#">
-									<img src="img/coca-cola.png" alt="Coca Cola 0.33L">
-								</a>
-								<span id="price">2.5 Lei</span>
-								<h4>Coca Cola 0.33L</h4>
-								<div class="stars">
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-md-3 product-thumbnail" data-category="drink" data-price="2.5" data-name="Coca Cola 0.33L">
-							<div class="thumbnail">
-								<a href="#">
-									<img src="img/coca-cola.png" alt="Coca Cola 0.33L">
-								</a>
-								<span id="price">2.5 Lei</span>
-								<h4>Coca Cola 0.33L</h4>
-								<div class="stars">
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-								</div>
-							</div>
-						</div>
+						<?php
+							//DRINKS
+								$sql="SELECT products.*,category_name,display_name FROM products JOIN categories ON categories.id_category = products.id_category";
+								$q=mysqli_query($con,$sql);
+								while($row = mysqli_fetch_array($q)){
+									echo '<div class="col-xs-6 col-md-3 product-thumbnail" data-category="' . $row['category_name'] . '" data-price="' . $row['Price'] . '" data-name="' . $row['Product_name'] . '">
+										<div class="thumbnail">
+											<a href="#">
+												<img src="' . $row['picture'] . '" alt="' . $row['Product_name'] . '">
+											</a>
+											<span id="price">'.$row['Price'].' Lei</span>
+											<h4>'.$row['Product_name'].'</h4>
+											<div class="stars">';
+												$i=0;
+												for($i=0;$i<=$row['Rating'];$i++)
+													echo '<span class="glyphicon glyphicon-star"></span>';
+											echo '</div>
+										</div>
+									</div>';
+								}
+						?>
 					</div>
-					</div>
+				</div>
 			</div>
 			<!--RIGHT SIDE-->
 			<div class="col-md-3 col-xs-3">

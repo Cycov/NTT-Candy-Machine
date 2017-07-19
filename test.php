@@ -39,6 +39,46 @@
                 <span class="glyphicon glyphicon-plus"></span>
             </a>
         </div>
+		<!--PRODUCTS-->
+		<div class="col-xs-6 col-md-3 product-thumbnail" data-category="drink" data-price="2.5" data-name="Coca Cola 0.33L">
+							<div class="thumbnail">
+								<a href="#">
+									<img src="img/coca-cola.png" alt="Coca Cola 0.33L">
+								</a>
+								<span id="price">2.5 Lei</span>
+								<h4>Coca Cola 0.33L</h4>
+								<div class="stars">
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</div>
+							</div>
+		</div>
+						
+			
+		<?php
+			$i=0;
+			for($i=0;$i<=20;$i++)
+				echo '<div class="col-xs-6 col-md-3 product-thumbnail" data-category="drink" data-price="2.5" data-name="Coca Cola 0.33L">
+							<div class="thumbnail">
+								<a href="#">
+									<img src="img/coca-cola.png" alt="Coca Cola 0.33L">
+								</a>
+								<span id="price">2.5 Lei</span>
+								<h4>Coca Cola 0.33L</h4>
+								<div class="stars">
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</div>
+							</div>
+					</div>';
+		?>
+			
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
