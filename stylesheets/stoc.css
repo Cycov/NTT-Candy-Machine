@@ -90,6 +90,12 @@ body{
 	display:block;
 	margin:0 auto;
 }
+ .btn-group-justified>.btn.quantity.disabled {
+	width: 6%;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+}
 .form-group{
 	width:350px;
 	display:block;

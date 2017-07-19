@@ -2,10 +2,10 @@ $(document).ready(function(){
     var template = 
     {
         "id":0,
-        "name":"",
+        "name":"New product",
         "quantity":0,
         "description":"",
-        "category":"",
+        "category":"none",
         "price":0.0
     }
 
@@ -29,7 +29,7 @@ $(document).ready(function(){
         $('#product-price').val(0.0);
     }
 
-    var $prevEntry = $('li[data-id="1"]');
+    var $prevEntry = $('li:first');
     var currentId = 0;
 
     $('.quantity-increase').on('click',function(){
@@ -54,35 +54,66 @@ $(document).ready(function(){
         $prevEntry.removeClass('selected');
         $(this).addClass('selected');
         $prevEntry = $(this);
-        var unparsedData = $(this).children('span').html();
+        $.ajax({
+            url: "includes/product_query.php",
+            data: 
+            {
+                id: $prevEntry.attr('data-id')
+            },
+            success: function(result)
+            {
+                if (!isJson(result))
+                {
+                    console.error("Product data is not a valid json. (id: " + $(this).attr('data-id') + ' )');
+                    return;
+                }
 
-        if (!isJson(unparsedData))
-        {
-            console.error("Product data is not a valid json. (id: " + $(this).attr('data-id') + ' )');
-            return;
-        }
-
-        var data = jQuery.parseJSON(unparsedData);
-        $('#product-name').html(data.name);
-        $('#product-rename').val(data.name);
-        $('.quantity.disabled').html(data.quantity);
-        $('.quantity-product').attr('data-quantity',data.quantity);
-        $('#product-description').val(data.description);
-        $('#product-category').val(data.category);
-        console.log(data.category);
-        $('#product-price').val(data.price);
-        $(this).attr('data-id',data.id);
-        currentId = data.id;
+                var data = jQuery.parseJSON(result);
+                $('#product-name').html(data.name);
+                $('#product-rename').val(data.name);
+                $('.quantity.disabled').html(data.quantity);
+                $('.quantity-product').attr('data-quantity',data.quantity);
+                $('#product-description').val(data.description);
+                $('#product-category').val(data.category);
+                $('#product-price').val(data.price);
+                $(this).attr('data-id',data.id);
+                currentId = data.id;
+            },
+            error: function(response, code) {
+                console.error("Error sending data: " + response + " - " + code);
+            }
+        });
     });
 
     $prevEntry.trigger('click');
+
     $('#product-new-btn').on('click',function(){
-        $('#products-in-stock').append('<li class="product-entry data-id="' + currentId + '">' +
-        '<span style="display: none">' + template + '</span>' +
+        $('#products-in-stock').append('<li class="product-entry data-id="' + currentId + '">' + 
         '<a href="#">New product</a></li>');
+        
+        $('#products-in-stock li:last-child()').trigger('click');
 
         clearAllFields('New product');
     });
 
-    //TODO: Add AJAX, eanble save btn;
+    $('#save-changes-btn').on('click',function(){
+        $.ajax({
+            url: "",
+            data:
+            {
+                name : $('#product-rename').val(data.name),
+                quantity : $('.quantity-product').attr('data-quantity'),
+                description : $('#product-description').val(data.description),
+                category : $('#product-category').val(data.category),
+                price : $('#product-price').val(data.price),
+                id : currentId
+            },
+            success: function(response) {
+                console.info("Data sent succesfully ( server response: " + response + ")");
+            },
+            error: function(response, code) {
+                console.error("Error sending data: " + response + " - " + code);
+            }
+        });
+    });
 });

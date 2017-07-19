@@ -25,9 +25,12 @@
 			</div>
 			<div class="scrollbar">
 				<ul id="products-in-stock">
-					<li class="product-entry selected" data-id="1"><span style="display: none">{ "id":0, "name":"test product1", "quantity":2, "description":"none", "category":"snack", "price":2.5 }</span><a href="#"> Coca Cola 0.5L </a></li> 
-					<li class="product-entry" data-id="2"><span style="display: none">{ "id":0, "name":"test product2", "quantity":4, "description":"none", "category":"drink", "price":2.5 }</span><a href="#"> Coca Cola 0.5L </a></li> 
-					<li class="product-entry" data-id="3"><span style="display: none">{ "id":0, "name":"test product3", "quantity":287, "description":"none", "category":"candy", "price":2.5 }</span><a href="#"> Coca Cola 0.5L </a></li> 
+					<?php
+						//TODO: extract products from DB
+					?>
+					<li class="product-entry selected" data-id="1"><a href="#">test product1</a></li> 
+					<li class="product-entry" data-id="2"><a href="#">test product2</a></li> 
+					<li class="product-entry" data-id="3"><a href="#">test product3</a></li> 
 				</ul>
 			</div>
 		</div>
@@ -82,7 +85,7 @@
 			</div>
 			<br>
 			<div class="form-group center">
-				<a class="btn btn-success">Salveaza</a>
+				<a id="save-changes-btn" class="btn btn-success">Salveaza</a>
 			</div>
 			</form>
 		</div>
