@@ -17,6 +17,27 @@ body{
 .scrollbar ul{
 	list-style-type:none;
 }
+.scrollbar ul li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.scrollbar ul li:nth-child(even){
+	background-color: #DDDDDD;
+}
+.scrollbar ul li.selected {
+    border: 2px solid #dadada;
+    border-radius: 2px;
+    outline: none;
+    border-color: #4173ea;
+    box-shadow: 0 0 10px #9ecaed;
+	background-color: #898989;
+}
+.scrollbar ul li.selected a {
+	color: white;
+}
+.scrollbar ul li.selected a::after  {
+	content: "  >";
+}
 .btn-default{
 	width:180px;
 	margin-top:10px;
@@ -64,7 +85,7 @@ body{
 .head-stoc-dr h1,h3{
 	text-align:center;
 }
-.btn-group.btn-group-justified.basket-product{
+.btn-group.btn-group-justified.quantity-product{
 	width:200px;
 	display:block;
 	margin:0 auto;
@@ -81,7 +102,7 @@ body{
 .form-group label.second{
 	width:auto;
 }
-#submit-btn{
+.center a{
 	display:block;
 	margin:0 auto;
 }

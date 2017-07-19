@@ -9,11 +9,11 @@ tr:nth-child(even) {
 	line-height:34px;
 	position:relative;
 }
-#datetimepicker6{
+#fromDate{
 	width:250px;
 	float:right;
 }
-#datetimepicker7{
+#toDate{
 	width:250px;
 	float:right;
 }

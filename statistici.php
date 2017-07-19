@@ -20,7 +20,7 @@
 		<div class="col-xs-4 col-md-4">
 			<div class="form-group">
 			<label>De la:</label>
-				<div class='input-group date' id='datetimepicker6'>
+				<div class='input-group date' id='fromDate'>
 					<input type='text' class="form-control" />
 					<span class="input-group-addon">
 						<span class="glyphicon glyphicon-calendar"></span>
@@ -31,7 +31,7 @@
 		<div class="col-xs-4 col-md-4">
 			<div class="form-group">
 				<label>Pana la:</label>
-				<div class='input-group date' id='datetimepicker7'>
+				<div class='input-group date' id='toDate'>
 					<input type='text' class="form-control" />
 					<span class="input-group-addon">
 						<span class="glyphicon glyphicon-calendar"></span>
