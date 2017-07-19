@@ -64,36 +64,24 @@
 					<div class="row">
 						<?php
 							//DRINKS
-								$sql="SELECT * FROM products,categories WHERE products.id_category=categories.id_category";
+								$sql="SELECT products.*,category_name,display_name FROM products JOIN categories ON categories.id_category = products.id_category";
 								$q=mysqli_query($con,$sql);
-								if(mysqli_num_rows($q)!=0){
-									while($row=mysqli_fetch_assoc($q)){
-										$nume_categorie=$row["categories.id_category"];
-									}
-								}
-								else{
-									echo mysqli_error($con);
-								}
-							$i=0;
-							for($i=0;$i<=8;$i++){
-								echo '<div class="col-xs-6 col-md-3 product-thumbnail" data-category="drink" data-price="2.5" data-name="Coca Cola 0.33L">
+								while($row = mysqli_fetch_array($q)){
+									echo '<div class="col-xs-6 col-md-3 product-thumbnail" data-category="' . $row['category_name'] . '" data-price="' . $row['Price'] . '" data-name="' . $row['Product_name'] . '">
 										<div class="thumbnail">
 											<a href="#">
-												<img src="img/coca-cola.png" alt="Coca Cola 0.33L">
+												<img src="' . $row['picture'] . '" alt="' . $row['Product_name'] . '">
 											</a>
-											<span id="price">2.5 Lei</span>
-											<h4>Coca Cola 0.33L</h4>
-											<div class="stars">
-												<span class="glyphicon glyphicon-star"></span>
-												<span class="glyphicon glyphicon-star"></span>
-												<span class="glyphicon glyphicon-star"></span>
-												<span class="glyphicon glyphicon-star"></span>
-												<span class="glyphicon glyphicon-star"></span>
-											</div>
+											<span id="price">'.$row['Price'].' Lei</span>
+											<h4>'.$row['Product_name'].'</h4>
+											<div class="stars">';
+												$i=0;
+												for($i=0;$i<=$row['Rating'];$i++)
+													echo '<span class="glyphicon glyphicon-star"></span>';
+											echo '</div>
 										</div>
 									</div>';
-							}
-							//de populat div-ul cu produse....in progress
+								}
 						?>
 					</div>
 				</div>
